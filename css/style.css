@@ -1,0 +1,358 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f6fa;
+  color: #2d3436;
+  }
+  header, nav {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .container {
+    padding: 2rem;
+  }
+  .cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 200px;
+  }
+  .actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .actions a {
+    padding: 1rem;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+  }
+  .actions a:hover {
+    background-color: #2980b9;
+  }
+  table {
+    width: 100%;
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    background-color: #ecf0f1;
+  }
+  .logout {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+
+  /*
+    Cadastrar Produto
+  */
+  .form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  form input, form select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  form .btn {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+  }
+  form .cancelar {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: #cc2e2e;
+    color: white;
+    border: none;
+  }
+  form .salvar:hover {
+    background-color: #27ae5fb4;
+  }
+  form .cancelar:hover {
+    background-color: #cc2e2ec0;
+  }
+  form a {
+    text-decoration: none;
+  }
+
+  /*  
+    Ver Produto
+  */
+  .produto-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .produto-container h2 {
+    margin-bottom: 1.5rem;
+  }
+  .produto-info {
+    margin-bottom: 1rem;
+  }
+  .produto-info strong {
+    display: inline-block;
+    width: 150px;
+  }
+  .botoes {
+    margin-top: 2rem;
+  }
+  .botoes a, button {
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+
+  .botoes a:hover {
+    background-color: #2980b9;
+  }
+  /*  
+    Lista de Produtos
+  */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  .empty-message {
+    text-align: center;
+    color: #888;
+    margin-top: 20px;
+  }
+  button.btn-editar,
+button.btn-excluir {
+  padding: 6px 12px;
+  margin: 2px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+button.btn-editar {
+  background-color: #3498db; /* azul */
+}
+
+button.btn-editar:hover {
+  background-color: #2980b9;
+}
+
+button.btn-excluir {
+  background-color: #e74c3c; /* vermelho */
+}
+
+button.btn-excluir:hover {
+  background-color: #c0392b;
+}
+
+/*
+  Layout responsivo
+*/
+/* Container que permite scroll horizontal em telas pequenas */
+.tabela-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+/* Estilização básica da tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* força o scroll em telas pequenas */
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Botões tocáveis */
+button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  margin: 2px;
+}
+
+/* Ajuste para telas pequenas */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  body {
+    padding: 10px;
+  }
+}
+
+
+/*
+  botão sair / trocar de login
+*/
+.logout-container {
+  text-align: right;
+  padding: 10px;
+}
+
+.logout-button {
+  padding: 8px 12px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+/*
+  filtro de busca
+*/
+.filtro-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
+
+.filtro-container input,
+.filtro-container select {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  flex: 1;
+  min-width: 150px;
+}
+/* Estilo para seção de relatórios */
+.relatorios {
+  margin-left: 220px; /* ajusta para não ficar sob a sidebar */
+  padding: 20px;
+  max-width: 1000px;
+}
+
+/* ====== Responsividade para telas menores (como Galaxy A15) ====== */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .container, .form-container, .content, main {
+    width: 100% !important;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  nav, header, footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  input, button, select {
+    width: 100% !important;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+}

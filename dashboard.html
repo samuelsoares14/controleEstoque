@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Controle de Estoque</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/verificaLogin.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="usuario-logado" id="usuarioLogado">
+      Olá, <span id="nomeUsuario"></span> 👤
+    </div>    
+    <div class="sidebar-header">
+      <h2>📦 Estoque</h2>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="dashboard.html">🏠 Dashboard</a></li>
+        <a href="cadastrarProduto.html">📦 Cadastrar Produto</a>
+        <li><a href="retiradaProduto.html">📦Retirar Produto</a></li>
+        <li><a href="listaProduto.html">📋 Lista de Produtos</a></li>
+        <li><a href="#">📊 Relatórios</a></li>
+        <li><a href="#" onclick="confirmarLogout()">🚪 Sair</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <div class="main-content">
+    <div class="container">
+      <div class="cards">
+        <div  class="card">
+          <h3>Total de Produtos</h3>
+          <p id="totalProdutos">150</p>
+        </div>
+        <div class="card">
+          <h3>Estoque Baixo</h3>
+          <p id="estoqueBaixo">8 produtos</p>
+        </div>
+        <div  class="card">
+          <h3>Movimentações Hoje</h3>
+          <p id="movimentacoesHoje">12</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/verificaLogin.js"></script>  
+  <!-- Relatórios -->
+<section id="relatorios" class="relatorios">
+  <h2>Relatórios</h2>
+  <div id="graficoTopRetirados" style="width: 100%; max-width: 600px; margin-bottom: 2rem;"></div>
+  <div id="tabelaMenorEstoque" style="margin-bottom: 2rem;"></div>
+  <div id="graficoMovimentacoesMes" style="width: 100%; max-width: 600px; margin-bottom: 2rem;"></div>
+  <button onclick="exportarRelatorioPDF()">Exportar PDF</button>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/relatorios.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

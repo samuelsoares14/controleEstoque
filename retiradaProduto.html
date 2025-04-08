@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Retirada de Produto</title>
+  <link rel="stylesheet" href="css/retiradaProduto.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <header>
+    <h1>Retirar Produto</h1>
+    <button onclick="confirmarLogout()">Logout</button>
+    <p>Usuário logado: <span id="nomeUsuario"></span></p>
+  </header>
+
+  <main>
+    <form id="formRetirada">
+        <label for="buscaProduto">Buscar produto (nome ou código):</label>
+        <input type="text" id="buscaProduto" list="listaProdutos" autocomplete="off" required>
+
+        <datalist id="listaProdutos"></datalist>
+
+        <label for="codigoProduto">Código:</label>
+        <input type="text" id="codigoProduto" readonly>
+
+        <label for="nomeProduto">Nome:</label>
+        <input type="text" id="nomeProduto" readonly>
+
+        <p id="estoqueAtual">Estoque atual: -</p>
+
+        <label for="quantidade">Quantidade a retirar:</label>
+        <input type="number" id="quantidade" min="1" required>
+
+        <label for="observacoes">Observações (opcional):</label>
+        <input type="text" id="observacoes">
+
+        
+        <button class="btn salvar" type="submit">Salvar Produto</button>
+        <a href="dashboard.html" class="btn cancelar" type="submit cancelar">Cancelar</a>
+    </form>
+  </main>
+
+  <script src="verificaLogin.js"></script>
+  <script src="js/retiradaProduto.js"></script>
+</body>
+</html>

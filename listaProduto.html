@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <h1>Lista de Produtos - Estoque</h1>
+      <button onclick="confirmarLogout()" class="logout-button">
+        🚪 Sair / Trocar Login
+      </button>
+    </div>
+  </header>
+  <div class="tabela-container">
+    <table>
+      <!-- cabeçalho e linhas -->
+        
+          <div class="actions">
+            <a href="cadastrarProduto.html">📦 Cadastrar Produto</a>
+            <a href="#" onclick="exportarPDF()">📄 Exportar para PDF</a>
+            <a href="dashboard.html">Voltar</a>
+          </div>
+          <div class="filtro-container">
+            <input type="text" id="filtroCodigo" placeholder="Buscar por código..." oninput="filtrarProdutos()">
+            <input type="text" id="filtroNome" placeholder="Buscar por nome..." oninput="filtrarProdutos()">
+            <select id="filtroCategoria" onchange="filtrarProdutos()">
+              <option value="">Todas as categorias</option>
+              <option value="Eletrônicos">Eletrônicos</option>
+              <option value="Roupas">Roupas</option>
+              <option value="Alimentos">Alimentos</option>
+              <!-- Adicione mais se quiser -->
+            </select>
+          </div>
+                   
+    <table>
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nome do Produto</th>
+          <th>Categoria</th>
+          <th>Quantidade</th>
+          <th>Data/Hora de Entrada</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="lista-produtos">
+      <!-- Linhas dos produtos serão inseridas aqui -->
+      </tbody>
+    </table>
+
+      <p class="empty-message">Nenhum produto cadastrado ainda.</p>
+    </table>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/listaProdutos.js"></script>
+  <script src="js/verificaLogin.js"></script>
+</body>
+</html>
